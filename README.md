@@ -1,6 +1,6 @@
 # PC16 – Week 8: Dart Logic Problem Set
 
-This repository contains the Dart solution for **Week 8: Dart Fundamentals 2** as part of the *PC16 - Mobile Development with Lab* course.
+This repository contains the Dart solution for **Week 8: Dart Fundamentals 2** under the course/subject *PC16 - Mobile Development with Lab*.
 
 ## Overview
 The program demonstrates foundational Dart programming concepts including conditional logic, iterative loops, modular functions with parameters, and runtime error handling using `try/catch` blocks.
@@ -12,6 +12,6 @@ The program demonstrates foundational Dart programming concepts including condit
 - **Error Handling (`try/catch`)**: Catches invalid data types and potential execution errors gracefully without terminating the program.
 
 ## How to Run
-1. Make sure you have the [Dart SDK](https://dart.dev/get-dart) installed.
-2. Open your terminal in the root directory.
-3. Run the following command:
+1. Go to DartPad webpage -> https://dartpad.dev/
+2. Copy and Past the "Dart_IndividualGrade_Code"
+3. run
