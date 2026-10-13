@@ -1,0 +1,5 @@
+Item 1: Score 85 - PASS
+Item 2: Score 42 - FAIL
+Item 3: Invalid input ("invalid_number"). Error handled gracefully.
+Item 4: Score 90 - PASS
+Successfully processed 3 scores.
