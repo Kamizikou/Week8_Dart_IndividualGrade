@@ -1,5 +1,29 @@
-Item 1: Score 85 - PASS
-Item 2: Score 42 - FAIL
-Item 3: Invalid input ("invalid_number"). Error handled gracefully.
-Item 4: Score 90 - PASS
-Successfully processed 3 scores.
+==================================================
+  PC16: Dart Logic Problem Set - Test Execution   
+==================================================
+
+--- Processing Score #1 ("93.5") ---
+Excellent performance: 93.5
+
+--- Processing Score #2 ("82.0") ---
+Passing score: 82
+
+--- Processing Score #3 ("60.0") ---
+Needs improvement: 60
+
+--- Processing Score #4 ("invalid") ---
+Error encountered processing score "invalid": FormatException: Invalid double
+invalid
+Skipping invalid input and continuing execution safely.
+
+--- Processing Score #5 ("-15.0") ---
+Error encountered processing score "-15.0": Invalid argument(s): Score must be between 0 and 100.
+Skipping invalid input and continuing execution safely.
+
+--- Processing Score #6 ("100.0") ---
+Excellent performance: 100
+
+==================================================
+FINAL RESULT
+Total Combined Processed Score: 335.5
+==================================================
