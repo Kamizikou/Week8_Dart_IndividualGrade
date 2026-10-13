@@ -1,0 +1,28 @@
+String processScores(List<dynamic> scores, int maxRepeats) {
+  int totalValidScores = 0;
+
+  for (int i = 0; i < maxRepeats && i < scores.length; i++) {
+    try {
+      int score = int.parse(scores[i].toString());
+
+      if (score >= 75) {
+        print('Item ${i + 1}: Score $score - PASS');
+      } else {
+        print('Item ${i + 1}: Score $score - FAIL');
+      }
+      
+      totalValidScores++;
+    } catch (e) {
+      print('Item ${i + 1}: Invalid input ("${scores[i]}"). Error handled gracefully.');
+    }
+  }
+
+  return 'Successfully processed $totalValidScores scores.';
+}
+
+void main() {
+  List<dynamic> testData = [85, 42, "invalid_number", 90];
+
+  String result = processScores(testData, 4);
+  print(result);
+}
