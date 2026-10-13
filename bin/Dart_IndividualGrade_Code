@@ -1,28 +1,58 @@
-String processScores(List<dynamic> scores, int maxRepeats) {
-  int totalValidScores = 0;
+// Name: Ismael Haven R. Caday
+// PC16 Mobile Development - Week 8: Dart Logic Problem Set
 
-  for (int i = 0; i < maxRepeats && i < scores.length; i++) {
+
+
+double processStudentScores(List<String> rawScores) {
+  double totalScore = 0.0;
+
+  for (int i = 0; i < rawScores.length; i++) {
+    print('\n--- Processing Score #${i + 1} ("${rawScores[i]}") ---');
+
     try {
-      int score = int.parse(scores[i].toString());
+      double score = double.parse(rawScores[i]);
 
-      if (score >= 75) {
-        print('Item ${i + 1}: Score $score - PASS');
+      // Simple, standard grade branching
+      if (score < 0 || score > 100) {
+        throw ArgumentError('Score must be between 0 and 100.');
+      } else if (score >= 90) {
+        print('Excellent performance: $score');
+        totalScore += score;
+      } else if (score >= 75) {
+        print('Passing score: $score');
+        totalScore += score;
       } else {
-        print('Item ${i + 1}: Score $score - FAIL');
+        print('Needs improvement: $score');
+        totalScore += score;
       }
-      
-      totalValidScores++;
     } catch (e) {
-      print('Item ${i + 1}: Invalid input ("${scores[i]}"). Error handled gracefully.');
+      print('Error encountered processing score "${rawScores[i]}": $e');
+      print('Skipping invalid input and continuing execution safely.');
     }
   }
 
-  return 'Successfully processed $totalValidScores scores.';
+  return totalScore;
 }
 
 void main() {
-  List<dynamic> testData = [85, 42, "invalid_number", 90];
+  print('==================================================');
+  print('  PC16: Dart Logic Problem Set - Test Execution   ');
+  print('==================================================');
 
-  String result = processScores(testData, 4);
-  print(result);
+  List<String> testScores = [
+    '93.5',    
+    '82.0',    
+    '60.0',    
+    'invalid', 
+    '-15.0',   
+    '100.0'    
+  ];
+
+  // FUNCTION CALL
+  double finalTotal = processStudentScores(testScores);
+
+  print('\n==================================================');
+  print('FINAL RESULT');
+  print('Total Combined Processed Score: $finalTotal');
+  print('==================================================');
 }
